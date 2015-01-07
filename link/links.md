@@ -28,7 +28,11 @@
 
 	好像是阉割版的待字闺中.
 
-4.  
+4. 	https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/Readme.md
+
+	July最新著作.
+
+5.	https://github.com/ThreeCobblers/Paladin/tree/master/doc/Cracking_the_Coding_Interview_4_Edition.pdf  
 
 	CC150据说很基础，但是可以学习一下用英语描述问题的能力，面试外企必备.
 
