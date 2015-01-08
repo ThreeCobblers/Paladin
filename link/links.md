@@ -36,6 +36,10 @@
 
 	CC150据说很基础，但是可以学习一下用英语描述问题的能力，面试外企必备.
 
+6	http://www.careercup.com/
+
+	这个网站上的question板块是很多比较新的面试题，下面还有一些解答.
+
 #面经
 1.	http://www.itint5.com/
 
