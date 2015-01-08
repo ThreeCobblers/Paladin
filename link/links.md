@@ -14,6 +14,10 @@
 	
 	July的博客，很多算法和数据结构讲的很清楚.
 
+4.	http://www.newsmth.net/nForum/#!board/Algorithm?p=1
+
+	水木算法板块
+
 #面试题
 
 1.	https://oj.leetcode.com/problems/
@@ -48,6 +52,10 @@
 2.	http://mitbbsde.com/bbsdoc/JobHunting.html
 
 	大多数都是海外公司的面经，不过好像只能看到贴子标题，在宿舍没法访问贴子内容.
+
+3.	http://www.1point3acres.com/bbs/forum-28-1.html
+
+	一亩三分地找工作版，大多都是针对海外.
 
 
 
