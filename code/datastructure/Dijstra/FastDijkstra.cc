@@ -65,5 +65,8 @@ int main(int argc, char *argv[]) {
 
     (new Solution)->dijkstra(edge, s, t);
 
+    #ifdef DEBUG
+    fclose(stdin);
+    #endif
     return 0;
 }
