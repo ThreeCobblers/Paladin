@@ -8,7 +8,7 @@
 
 	[answer](LongestIncSub.md)
 
-*	最多出现次数问题
+*	最多出现次数问
 
 	find the most common number in a list of number
 
