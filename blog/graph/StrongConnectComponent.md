@@ -1,15 +1,21 @@
-#强连通分量
+#强连通分量 :smirk:
 
 ##定义
-	有向图中G中，所有极大连通子图都称为强连通分量,连通子图就是子图中任意两个顶点都可以互达.
+	对于向图中G=(V,E),如果任意节点都时相互可达的,则该有向图是强连通的.
+	G的强连通分量是"相互可达"的顶点的等价类,G的强连通分量是其的一个极大连通子图.
 
 ##算法
 
-求有向图G强连通分量，主要对图G以及图G的转置图<img src="http://www.forkosh.com/mathtex.cgi?  G^T">分别进行DFS.
+	求有向图G强连通分量，主要对图G以及图G的转置图<img src="http://www.forkosh.com/mathtex.cgi?  G^T">分别进行DFS.
 
-我们可以想一下，从某个顶点v开始进行DFS,那么这一路DFS发现了顶点集合<img src="http://www.forkosh.com/mathtex.cgi?  F=\{v_i_1, v_i_2, ... , v_i_l \}">, 根据DFS的特点我们可以知道对于F中每个顶点，v都可以到达. 同样，从顶点v开始对GT进行DFS,一路DFS发现了顶点集合<img src="http://www.forkosh.com/mathtex.cgi?  B=\{v_j_1, v_j_2, ... , v_j_m \}">, 然后我们求F与B的交集C, 假设<img src="http://www.forkosh.com/mathtex.cgi?  C=\{v_k_1, v_k_2, ... , v_k_n \}">,那么对于C中任意顶点对p,q: 首先q属于F，则G中必有v -> q的路径，然后p属于B,则在<img src="http://www.forkosh.com/mathtex.cgi?  G^T">中必有v -> p的路径，那么在G中必有p -> v的路径，所以G中必有p -> v -> q的路径，同理可得必有q -> v -> p的路径，即p,q可以互达.
+	1.从某个顶点v开始进行DFS,记录访问到的顶点集合<img src="http://www.forkosh.com/mathtex.cgi?  F=\{v_i_1, v_i_2, ... , v_i_l \}">, 根据DFS的特点我们可以知道对于F中每个顶点，v都可以到达. 
+	2.从顶点v开始对<img src="http://www.forkosh.com/mathtex.cgi?  G^T">进行DFS,记录访问到的顶点集合<img src="http://www.forkosh.com/mathtex.cgi?  B=\{v_j_1, v_j_2, ... , v_j_m \}">.
+	3.计算F与B的交集C, 假设<img src="http://www.forkosh.com/mathtex.cgi?  C=\{v_k_1, v_k_2, ... , v_k_n \}">,
+		那么对于C中任意顶点对p,q: 首先q属于F，则G中必有v -> q的路径，然后p属于B,
+		则在<img src="http://www.forkosh.com/mathtex.cgi?  G^T">中必有v -> p的路径，
+		那么在G中必有p -> v的路径，所以G中必有p -> v -> q的路径，同理可得必有q -> v -> p的路径，即p,q可以互达.
 
-所以可以确定集合C是一个连通分量，那么如果存在某个节点t,不属于C,但是可以与C合成一个连通分量，那么t必然与v互达，那么ｔ必然属于F与B集合，则t必然属于C集合，所以矛盾，所以C是极大连通分量.
+	所以可以确定集合C是一个连通分量，那么如果存在某个节点t,不属于C,但是可以与C合成一个连通分量，那么t必然与v互达，那么ｔ必然属于F与B集合，则t必然属于C集合，所以矛盾，所以C是极大连通分量.
 
 举例：
 ---
