@@ -161,3 +161,5 @@ void sort_heap(vector<int> &data, int len){
 }
 ```
 时间复杂度O(nlgn)
+
+Heap.cc 是一个简单的类封装实现（目前还有一点问题，sort完成后堆是否还要保持有效）
