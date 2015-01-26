@@ -80,8 +80,7 @@ int minPath(vector<vector<Node> > &data, int S, int  T){
 	已经被访问过的节点(某次循环中,具有最小值),不会被再次访问.
 
 ####Bellman-Ford算法
-	对于图中存在负边权的问题,Dijkstra就无计可施了,此时Bellman-Ford算法就大显身手了 
-	:smirk:
+对于图中存在负边权的问题,Dijkstra就无计可施了,此时Bellman-Ford算法就大显身手了:smirk:
 
 ####算法描述
 	1. 对图G中所有的边进行Relax操作:
@@ -94,10 +93,10 @@ int minPath(vector<vector<Node> > &data, int S, int  T){
 		对于不存在负权值的边的图,则可以确定其最短路径信息.
 
 ####简单说明
-	为什么要做|V|-1次全图Relax操作?
-		对于图中任一的顶点,其到达目标顶点的路径上最多间隔|V|-1个边,<img src="ht    tp://www.forkosh.com/mathtex.cgi?  F=\{v_i_1, v_i_2, ... , v_    i_l \}">.
-		每次Relax操作,都能帮助更多的顶点取得最短路径(设想退化为单链表的情况).
-		则,只需要等先前的每个顶点都计算出最短路径时,本节点的最短路径也就自然获得.
+为什么要做|V|-1次全图Relax操作?
+
+对于图中任一的顶点,其到达目标顶点的路径上最多间隔|V|-1个边,<img src="http://www.forkosh.com/mathtex.cgi?  F=\{v_i_1, v_i_2, ... , v_i_l \}">.
+每次Relax操作,都能帮助更多的顶点取得最短路径(设想退化为单链表的情况). 则,只需要等先前的每个顶点都计算出最短路径时,本节点的最短路径也就自然获得.
 
 ####代码
 ```C++
