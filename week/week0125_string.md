@@ -9,6 +9,7 @@
 >能用作标准库容器的元素类型，即 vector/list/deque 的 value_type。（用作 std::map 的 key_type 是更进一步的要求，要重载>运算符等,本文从略)
 
 >换言之，你的 String 能让以下代码编译运行通过，并且没有内存方面的错误。
+
 ```C++
 void foo(String x){}
  
