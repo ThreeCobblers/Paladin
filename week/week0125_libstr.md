@@ -6,11 +6,12 @@
 *	输入参数是什么类型,该不该是const修饰
 *	输入的指针是否为NULL
 *	字符串处理完毕后,新产生的字符串末尾是否要加'\0'
-*	要不要返回值,该返回什么类型的
+*	要不要返回值,该返回什么类型的(对于要返回值的是为了实现链式操作)
 
 还有一些我觉得可能需要考虑的:
 
 *	有没有地址重叠
+*	src和dest地址一样
 *	需不需要优化做法
 
 ##代码
@@ -65,6 +66,7 @@ int strlen(const char *str){
 // 考虑输入参数的const性,输入参数是否合法,返回值,最后位置为'\0'
 // 至于src和dest地址重叠问题,libc里面并没有考虑,我觉得考虑一下还是很好的.
 char *strcpy(char *dest,const char *src){
+	if(dest == src)	return dest;
 	assert(dest && src);  //输入参数不为NULL
 	char* address = dest;
 	int lens = strlen(src);
@@ -165,6 +167,7 @@ char *strcat(char *strDest, const char *strScr){
 
 //输入参数const性和非NULL,
 int strcmp(const char *str1,const char *str2){
+	if(str1 == str2)	return 0;
 	assert(str1 && str2);
 	//这样写很简洁
 	while(*str1 && *str2 && (*str1 == *str2)){
@@ -177,6 +180,7 @@ int strcmp(const char *str1,const char *str2){
 //注意输入参数是void*和const void*, 输出参数是void*,要保证输出参数非NULL
 //libc使用了page copy, unsigned long copy做到快速拷贝
 void *memcpy(void *dest, const void *src, size_t count){
+	if(dest == src)	return dest;
 	assert(src && dest);
 	if(!src || !dest)	return NULL;
 	unsigned char *d = (unsigned char*)dest, *s = (unsigned char*)src;
