@@ -17,3 +17,4 @@
 *	逆序数问题
 
 	[answer](invertedNum.md)
+
