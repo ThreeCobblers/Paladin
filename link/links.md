@@ -14,9 +14,8 @@
 	
 	July的博客，很多算法和数据结构讲的很清楚.
 
-4.	http://www.newsmth.net/nForum/#!board/Algorithm?p=1
-
-	水木算法板块
+4.	https://github.com/coderfengyun/TCSE2012
+	上届师兄讨论班网址
 
 #面试题
 
