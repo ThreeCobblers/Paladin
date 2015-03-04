@@ -19,8 +19,8 @@
 ##函数重载
 *	main函数不能被重载
 *	函数重载要求形参数目或者类型不一样
-*	除了是引用或者指针,const不能作为函数重载的区别,比如`void f(const int)`和`void f(int)`
-*	const引用或者指针可以作为重载函数的区别,比如`void f(const int&)`和`void f(int&)`,此时如果遇到的参数是const int类型自然调用第一个,而如果是int类型则优先调用第二个.
+*	顶层const不能作为函数重载的区别,比如`void f(const int)`和`void f(int)`
+*	const引用或者指针(底层const)可以作为重载函数的区别,比如`void f(const int&)`和`void f(int&)`,此时如果遇到的参数是const int类型自然调用第一个,而如果是int类型则优先调用第二个.
 *	如果我们在内层作用域声明名字,那么它将屏蔽外层作用域声明的同名实体.
 ```C++
 void print(double);
