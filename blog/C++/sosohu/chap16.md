@@ -13,23 +13,21 @@ bool comp(T a, T b){
 *	实例化函数模板: 我们直接给函数模板传递参数,编译器将通过推断模板参数来实例化函数模板.
 *	函数模板参数:
 	*	类型参数: 类型参数即可以用来指定函数的形参类型,也可以指定函数的返回值类型
-```C++
-template <typename R, typename T>
-R comp(T a, T b){
-	return a < b;
-}
-```
-
+	```C++
+	template <typename R, typename T>
+	R comp(T a, T b){
+		return a < b;
+	}
+	```
 	*	非类型参数: 非类型参数可以是一个整形,也可以是一个指向对象或者函数的指针或引用;绑定到非类型整形参数的实参必须是一个常量表达式,绑定到指针或引用的非类型参数必须具有静态的生存期.
-```C++
-template <int N, int M>
-bool comp(const char (&a)[N], const char (&b)[M]){
-	return strcmp(a, b);
-}
+	```C++
+	template <int N, int M>
+	bool comp(const char (&a)[N], const char (&b)[M]){
+		return strcmp(a, b);
+	}
 
-comp("hello", "world");
-```
-
+	comp("hello", "world");
+	```
 	*	函数模板和类模板成员函数的定义通常都放在头文件中
 	*	只有我们在实例化出模板的一个特定化版本时候,编译器才会生成相应代码
 	*	我们要保证传递给模板的实参支持模板所要求的操作,这是调用者的责任
