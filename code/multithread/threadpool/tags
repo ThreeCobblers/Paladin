@@ -1,0 +1,73 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CACU_COMMON_H	common.h	2;"	d
+CACU_PTHREADPOOL_H	cacu_job.h	2;"	d
+CACU_PTHREAD_MUTEX_INITIALIZER	common.h	35;"	d
+CACU_THREADPOOL_H	cacu_threadpool.h	2;"	d
+CFLAGS	Makefile	/^CFLAGS= -g -std=c99 -lpthread$/;"	m
+CHECKED_MALLOC	common.h	4;"	d
+CHECKED_MALLOCZERO	common.h	10;"	d
+COMPILE	Makefile	/^COMPILE = $(CC) $(CFLAGS)$/;"	m
+MAX_LEN	cacu.c	5;"	d	file:
+OBJS	Makefile	/^OBJS=$(patsubst %.c, %.o, $(wildcard *.c))$/;"	m
+a	cacu.c	/^char a[][MAX_LEN] = $/;"	v
+arg	common.h	/^    void *arg;$/;"	m	struct:__anon2
+cacu	cacu.c	/^void* cacu(void *arg)$/;"	f
+cacu_free	common.c	/^void cacu_free(void *p)$/;"	f
+cacu_job_delete_list	cacu_job.c	/^void cacu_job_delete_list(cacu_threadpool_job_t **list)$/;"	f
+cacu_job_shift	cacu_job.c	/^cacu_threadpool_job_t *cacu_job_shift(cacu_threadpool_job_t **list)$/;"	f
+cacu_malloc	common.c	/^void *cacu_malloc(int i_size)$/;"	f
+cacu_pthread_attr_destroy	common.h	33;"	d
+cacu_pthread_attr_init	common.h	32;"	d
+cacu_pthread_attr_t	common.h	31;"	d
+cacu_pthread_cond_broadcast	common.h	29;"	d
+cacu_pthread_cond_destroy	common.h	28;"	d
+cacu_pthread_cond_init	common.h	27;"	d
+cacu_pthread_cond_t	common.h	26;"	d
+cacu_pthread_cond_wait	common.h	30;"	d
+cacu_pthread_create	common.h	18;"	d
+cacu_pthread_join	common.h	19;"	d
+cacu_pthread_mutex_destroy	common.h	23;"	d
+cacu_pthread_mutex_init	common.h	22;"	d
+cacu_pthread_mutex_lock	common.h	24;"	d
+cacu_pthread_mutex_t	common.h	21;"	d
+cacu_pthread_mutex_unlock	common.h	25;"	d
+cacu_pthread_num_processors_np	common.h	34;"	d
+cacu_pthread_self	common.h	20;"	d
+cacu_pthread_t	common.h	17;"	d
+cacu_sync_job_list_delete	cacu_job.c	/^void cacu_sync_job_list_delete(cacu_sync_job_list_t *slist)$/;"	f
+cacu_sync_job_list_init	cacu_job.c	/^int cacu_sync_job_list_init(cacu_sync_job_list_t *slist, int max_size)$/;"	f
+cacu_sync_job_list_pop	cacu_job.c	/^cacu_threadpool_job_t *cacu_sync_job_list_pop(cacu_sync_job_list_t *slist)$/;"	f
+cacu_sync_job_list_push	cacu_job.c	/^void cacu_sync_job_list_push(cacu_sync_job_list_t *slist, cacu_threadpool_job_t *job)$/;"	f
+cacu_sync_job_list_t	cacu_job.h	/^} cacu_sync_job_list_t;$/;"	t	typeref:struct:__anon1
+cacu_threadpool_delete	cacu_threadpool.c	/^void cacu_threadpool_delete(cacu_threadpool_t *pool)$/;"	f
+cacu_threadpool_init	cacu_threadpool.c	/^int cacu_threadpool_init(cacu_threadpool_t **p_pool, int threads,$/;"	f
+cacu_threadpool_job_t	common.h	/^} cacu_threadpool_job_t;$/;"	t	typeref:struct:__anon2
+cacu_threadpool_list_delete	cacu_threadpool.c	/^static void cacu_threadpool_list_delete(cacu_sync_job_list_t *slist)$/;"	f	file:
+cacu_threadpool_run	cacu_threadpool.c	/^void cacu_threadpool_run(cacu_threadpool_t *pool, void *(*func)(void *), void *arg)$/;"	f
+cacu_threadpool_t	cacu_threadpool.c	/^struct cacu_threadpool_t$/;"	s	file:
+cacu_threadpool_t	cacu_threadpool.h	/^typedef struct cacu_threadpool_t cacu_threadpool_t;$/;"	t	typeref:struct:cacu_threadpool_t
+cacu_threadpool_thread	cacu_threadpool.c	/^static void *cacu_threadpool_thread(cacu_threadpool_t *pool)$/;"	f	file:
+cacu_threadpool_wait	cacu_threadpool.c	/^void *cacu_threadpool_wait(cacu_threadpool_t *pool, void *arg)$/;"	f
+cv_empty	cacu_job.h	/^    cacu_pthread_cond_t     cv_empty;$/;"	m	struct:__anon1
+cv_fill	cacu_job.h	/^    cacu_pthread_cond_t     cv_fill;$/;"	m	struct:__anon1
+done	cacu_threadpool.c	/^    cacu_sync_job_list_t done;    $/;"	m	struct:cacu_threadpool_t	file:
+exit	cacu_threadpool.c	/^    int             exit;$/;"	m	struct:cacu_threadpool_t	file:
+func	common.h	/^    void *(*func)(void *);$/;"	m	struct:__anon2
+i_max_size	cacu_job.h	/^    int                     i_max_size;$/;"	m	struct:__anon1
+i_size	cacu_job.h	/^    int                     i_size;$/;"	m	struct:__anon1
+init_arg	cacu_threadpool.c	/^    void            *init_arg;$/;"	m	struct:cacu_threadpool_t	file:
+init_func	cacu_threadpool.c	/^    void            (*init_func)(void *);$/;"	m	struct:cacu_threadpool_t	file:
+list	cacu_job.h	/^    cacu_threadpool_job_t   **list;$/;"	m	struct:__anon1
+loop	cacu.c	/^int loop[] = {$/;"	v
+main	cacu.c	/^int main(int argc, char *argv[])$/;"	f
+mutex	cacu_job.h	/^    cacu_pthread_mutex_t    mutex;$/;"	m	struct:__anon1
+ret	common.h	/^    void *ret;$/;"	m	struct:__anon2
+run	cacu_threadpool.c	/^    cacu_sync_job_list_t run;$/;"	m	struct:cacu_threadpool_t	file:
+thread_handle	cacu_threadpool.c	/^    cacu_pthread_t  *thread_handle;$/;"	m	struct:cacu_threadpool_t	file:
+threads	cacu_threadpool.c	/^    int             threads;$/;"	m	struct:cacu_threadpool_t	file:
+uninit	cacu_threadpool.c	/^    cacu_sync_job_list_t uninit;$/;"	m	struct:cacu_threadpool_t	file:
