@@ -1,4 +1,4 @@
-#C++ Primer 读书笔记
+#C++ Primer 5th Edition 读书笔记
 **Chapter 1.**[*编写一个简单的C++程序*](chap1.md)
 
 **Chapter 2.**[*变量和基本类型*](chap2.md)
