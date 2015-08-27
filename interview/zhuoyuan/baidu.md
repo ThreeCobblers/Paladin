@@ -2,7 +2,7 @@
 
 ## 一面
 
-1. 写个String类（写完后编译没问题，执行后发生了seg fault，发现是调用strlen时的问题)
+1. 写个String类
 
 2. 讨论directIO的特点，进而讨论page_cache调度算法，以及如何优化，最后让我设计一种高效的page_cache实现
 
